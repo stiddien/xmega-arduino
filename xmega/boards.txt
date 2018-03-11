@@ -195,3 +195,53 @@ akafuino.bootloader.file=akafuino/akafuino-boot.hex
 akafuino.bootloader.fuse2=0xBF
 #akafuino.bootloader.fuse4=0xFE
 akafuino.bootloader.fuse5=0xFD
+
+##############################################################
+
+bodycont.name=Humanoid Body Controller
+
+bodycont.build.board=XMEGA BODY ANALOGCONTROLLER
+bodycont.build.mcu=atxmega16a4u
+bodycont.build.f_cpu=32000000L
+bodycont.build.core=xmega
+bodycont.build.variant=bodycont
+bodycont.build.usbtype=USB_SERIAL
+
+#mattaira4u.upload.tool=dfu_programmer
+#.upload.tool=avrdude
+#mattaira4u.upload.protocol=flip2
+#mattaira4u.upload.speed=115200
+#mattaira4u.upload.maximum_size=131072
+
+## XPlain w/ Lufa
+## -------------------------
+cobycont.menu.programmer.lufa=Lufa
+bodycont.menu.programmer.lufa.upload.using=avrispmkii
+bodycont.menu.programmer.lufa.upload.protocol=arduino
+bodycont.menu.programmer.lufa.upload.speed=9600
+
+
+bodycont.upload.tool=avrdude
+bodycont.upload.maximum_size=131072
+
+# FUSE BITS
+# fuse0: JTAGUSERID
+# fuse1: WDWP=0xF WDP=0xF
+# fuse2: Boot Loader Reset
+# fuse4: JTAGEN
+# fuse5: BODLVL=2.1V
+bodycont.bootloader.tool=avrdude
+bodycont.bootloader.fuse0=0xFF
+bodycont.bootloader.fuse1=0xFF
+bodycont.bootloader.fuse2=0xBF
+bodycont.bootloader.fuse4=0xFE
+bodycont.bootloader.fuse5=0xFD
+bodycont.bootloader.unlock_bits=0x3F
+bodycont.bootloader.lock_bits=0x3F
+bodycont.bootloader.file=xplain/ATmegaBOOT_xplain.bin
+
+#mattaira4u.menu.usb.serial=Serial
+#mattaira4u.menu.usb.serial.build.usbtype=USB_SERIAL
+#mattaira4u.menu.usb.none=No USB
+#mattaira4u.menu.usb.none.build.usbtype=USB_NONE
+##############################################################
